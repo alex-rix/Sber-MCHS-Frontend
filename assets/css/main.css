@@ -1,0 +1,64 @@
+@import "./markdown.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "sber";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+    --default-font-family: "SB Sans Text";
+}
+
+@font-face {
+    font-family: "SB Sans Text";
+    src: local("SB Sans Text Light"), url("/fonts/SB_Sans_Text_Thin.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "SB Sans Text";
+    src: local("SB Sans Text Regular"), url("/fonts/SB_Sans_Text.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SB Sans Text";
+    src: local("SB Sans Text Bold"), url("/fonts/SB_Sans_Text_Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+body {
+  font-family: "SB Sans Text", sans-serif;
+  background-color: #ffffff;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-out;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.mask-icon {
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}

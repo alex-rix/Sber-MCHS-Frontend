@@ -1,0 +1,81 @@
+.markdown h1 {
+    @apply text-2xl font-extrabold my-2;
+}
+
+.markdown h2 {
+    @apply text-xl font-bold my-2;
+}
+
+.markdown h3,h4,h5,h6 {
+    @apply text-lg font-bold my-1;
+}
+
+.markdown a {
+    @apply underline;
+}
+
+.markdown h2 a, .markdown h3 a, .markdown h4 a, .markdown h5 a, .markdown h6 a {
+    @apply no-underline;
+}
+
+.markdown img {
+    @apply rounded-xl
+}
+
+.img-half-screen img {
+    max-height: 50vh;
+}
+
+.markdown table {
+    @apply table table-xs
+}
+
+.markdown p {
+    @apply my-2
+}
+
+.markdown blockquote {
+    @apply italic border-l-4 border-blue-400 pl-2;
+}
+
+.markdown li {
+    display: list-item;
+    @apply ml-2 my-2;
+}
+
+.markdown li::marker {
+    @apply font-bold
+}
+
+.markdown code {
+    @apply bg-base-200 rounded p-1;
+}
+
+.markdown pre {
+    @apply bg-base-200 rounded overflow-x-scroll h-fit p-2 leading-none;
+}
+
+.markdown pre code {
+    @apply bg-transparent;
+}
+
+.markdown ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.markdown ul ul, .markdown ol ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+.markdown ol ol, .markdown ul ol {
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+.markdown {
+    @apply overflow-scroll
+}

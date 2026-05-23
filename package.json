@@ -1,0 +1,25 @@
+{
+  "name": "ty-gotov",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/mdc": "^0.22.0",
+    "aos": "^2.3.4",
+    "nuxt": "^4.4.5",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/aos": "^3.0.8",
+    "daisyui": "^5.5.19"
+  }
+}
