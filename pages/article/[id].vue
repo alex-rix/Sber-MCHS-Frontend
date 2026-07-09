@@ -17,7 +17,7 @@
           v-if="article.image" 
           :src="article.image" 
           :alt="article.title" 
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover object-[center_20%]"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         
@@ -59,12 +59,14 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { articles } from '~/data/articles.js'
+import { laborArticles } from '~/data/laborArticles.js'
 
 // Получение доступа к текущему URL
 const route = useRoute()
+const allArticles = [...articles, ...laborArticles]
 
 // Поиск статьи по ID из URL (например: /article/fire-safety)
 const article = computed(() => {
-  return articles.find(a => a.id === route.params.id)
+  return allArticles.find(a => a.id === route.params.id)
 })
 </script>
